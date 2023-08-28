@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "overwatch-queue-notifier"
+version = "0.1.0"
+description = ""
+authors = ["thearyadev <personal@aryankothari.dev>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "overwatch_queue_notifier"}]
+
+[tool.poetry.dependencies]
+python = "3.11"
+torch = "^2.0.1"
+torchvision = "^0.15.2"
+pillow = "^10.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.3"
+black = "^23.7.0"
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
