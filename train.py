@@ -38,7 +38,7 @@ def main(
             optimizer.step()
 
             running_loss += loss.item()
-            if i % 2000 == 1999:
+            if i % 10 == 0:
                 print("[%d, %5d] loss: %.3f" % (epoch + 1, i + 1, running_loss / 2000))
                 running_loss = 0.0
     total = 0
@@ -63,8 +63,6 @@ def main(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    ## if --save, true, else false
-
     parser.add_argument("--epochs", type=int, default=10)
     args = parser.parse_args()
     raise SystemExit(main(save=True, epochs=10))
