@@ -8,7 +8,7 @@ readme = "README.md"
 packages = [{include = "overwatch_queue_notifier"}]
 
 [tool.poetry.dependencies]
-python = "3.11"
+python = "^3.11"
 pillow = "^10.0.0"
 torch = "^2.0.1"
 torchvision = "^0.15.2"
