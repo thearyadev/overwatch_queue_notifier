@@ -24,10 +24,8 @@ def load_dataset(root_path: Path) -> DataLoader:
 
 
 def load_image(image: Path | bytes | Image.Image) -> torch.Tensor:
-    if isinstance(image, Path) or isinstance(image, bytes):
-        image = Image.open(image).convert("RGB")
-    elif isinstance(image, Image.Image):
+    if isinstance(image, Image.Image):
         image = image.convert("RGB")
     else:
-        raise TypeError("Invalid type for image")
+        image = Image.open(image).convert("RGB")
     return TRANSFORMER(image).unsqueeze(0)
