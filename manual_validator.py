@@ -18,7 +18,7 @@ with open("./test5.png", "rb") as f:
 with torch.no_grad():
     start = perf_counter()
     for i in range(100):
-        image = load_image(b).to(device)
+        image = load_image(b).to(device)  # type: ignore
         output = model(image)
         x, predicted = torch.max(output, 1)
         classes = ("noqueue", "queue")
