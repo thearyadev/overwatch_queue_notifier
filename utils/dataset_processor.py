@@ -1,10 +1,10 @@
-import torch
-
-from torchvision import transforms  # type: ignore
-import torchvision
-from torch.utils.data import DataLoader
-from PIL import Image
 from pathlib import Path
+
+import torch
+import torchvision  # type: ignore
+from PIL import Image
+from torch.utils.data import DataLoader
+from torchvision import transforms  # type: ignore
 
 TRANSFORMER = transforms.Compose(
     [

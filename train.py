@@ -1,18 +1,13 @@
-import torch
+import argparse
+from pathlib import Path
 
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from utils.dataset_processor import load_dataset
-from utils.dataset_processor import TRANSFORMER
 from model import NeuralNetwork
-import argparse
-
-
-import torch
-import torch.nn as nn
-from pathlib import Path
+from utils.dataset_processor import TRANSFORMER, load_dataset
 
 
 def main(

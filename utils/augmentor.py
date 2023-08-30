@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from PIL import Image
-from typing import Callable
 from pathlib import Path
+from typing import Callable
 from uuid import uuid4
+
+from PIL import Image
 
 
 class Augmentor:
