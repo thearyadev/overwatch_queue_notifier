@@ -21,16 +21,3 @@ class AutoDropStack(Generic[T]):
         return {
             item: self.__stack.count(item) / len(self.__stack) for item in self.__stack
         }
-
-
-if __name__ == "__main__":
-    s = AutoDropStack(5)  # type: ignore
-    s.push(1)
-    s.push(2)
-    s.push(3)
-    s.push(4)
-    s.push(5)
-    s.push(6)
-    s.push(7)
-    s.push(8)
-    print(s.percentiles())
