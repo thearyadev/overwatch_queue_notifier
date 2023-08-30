@@ -1,10 +1,11 @@
+import os
+from pathlib import Path
+from typing import Callable
+from uuid import uuid4
+
 from PIL import Image
 
 from utils.augmentor import Augmentor
-from pathlib import Path
-import os
-from typing import Callable
-from uuid import uuid4
 
 sources: tuple[Path, Path] = (
     Path("data/source/noqueue"),
