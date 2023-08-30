@@ -1,12 +1,12 @@
-from PIL import Image
-
-import torch
-from model import NeuralNetwork
-from utils.dataset_processor import load_image
+import io
 from pathlib import Path
 from time import perf_counter
-import io
 
+import torch
+from PIL import Image
+
+from model import NeuralNetwork
+from utils.dataset_processor import load_image
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = NeuralNetwork().to(device)
