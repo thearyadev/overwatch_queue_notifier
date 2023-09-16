@@ -1,6 +1,8 @@
-from utils.notify import Notify
 from typing import Any
+
 from PIL.Image import Image
+
+from utils.notify import Notify
 
 
 class SampleNotifier(Notify):

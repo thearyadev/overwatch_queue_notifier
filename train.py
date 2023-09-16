@@ -54,7 +54,8 @@ def main(
 
     if save:
         torch.save(network.state_dict(), "model.pth")
-    return 0 
+    return 0
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

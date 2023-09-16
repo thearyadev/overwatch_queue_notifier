@@ -1,9 +1,18 @@
 from abc import ABC, abstractmethod
-from PIL import Image
 from typing import Any
+
+from PIL import Image
 
 
 class Notify(ABC):
+    """Notify class is used to send notifications to the user
+
+    Args:
+        ABC (_type_): abc
+
+    Returns:
+        _type_: abc
+    """
     @abstractmethod
     def send(self, image: Image.Image, **_: Any) -> bool:
         """Returns True if the notification was sent successfully.

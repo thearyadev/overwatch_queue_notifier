@@ -9,6 +9,7 @@ from PIL import Image
 from model import NeuralNetwork
 from utils.dataset_processor import TRANSFORMER, load_image
 
+# just a script
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = NeuralNetwork().to(device)
 model.load_state_dict(torch.load("./model/model.pth", map_location=device))

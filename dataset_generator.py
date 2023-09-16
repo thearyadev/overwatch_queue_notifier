@@ -6,7 +6,7 @@ from uuid import uuid4
 from PIL import Image
 
 from utils.augmentor import Augmentor
-
+# just a script
 sources: tuple[Path, Path] = (
     Path("data/source/noqueue"),
     Path("data/source/queue"),
