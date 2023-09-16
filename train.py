@@ -13,7 +13,7 @@ from utils.dataset_processor import TRANSFORMER, load_dataset
 def main(
     epochs: int,
     save: bool = False,
-):
+) -> int:
     train = load_dataset(Path("data/train"))
     test = load_dataset(Path("data/test"))
     classes = ("noqueue", "queue")
@@ -54,7 +54,7 @@ def main(
 
     if save:
         torch.save(network.state_dict(), "model.pth")
-
+    return 0 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
