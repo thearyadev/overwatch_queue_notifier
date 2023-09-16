@@ -1,10 +1,10 @@
 from pathlib import Path
 
 import torch
-import torchvision  # type: ignore
+import torchvision 
 from PIL import Image
 from torch.utils.data import DataLoader
-from torchvision import transforms  # type: ignore
+from torchvision import transforms 
 
 TRANSFORMER = transforms.Compose(
     [
@@ -15,7 +15,7 @@ TRANSFORMER = transforms.Compose(
 )
 
 
-def load_dataset(root_path: Path) -> DataLoader:
+def load_dataset(root_path: Path) -> DataLoader[torchvision.datasets.ImageFolder]:
     return DataLoader(
         torchvision.datasets.ImageFolder(root=root_path, transform=TRANSFORMER),
         batch_size=4,
@@ -28,4 +28,4 @@ def load_image(image: Path | bytes | Image.Image) -> torch.Tensor:
         image = image.convert("RGB")
     else:
         image = Image.open(image).convert("RGB")
-    return TRANSFORMER(image).unsqueeze(0)
+    return TRANSFORMER(image).unsqueeze(0) # type: ignore
