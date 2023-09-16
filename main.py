@@ -4,10 +4,11 @@ import importlib
 from utils.notify import Notify
 
 
-def main(notifier_module_name: str, notifier_package_name: str):
+def main(notifier_module_name: str, notifier_package_name: str) -> int:
     module = importlib.import_module(notifier_module_name)
     notifier = getattr(module, notifier_package_name)()
     notifier.send("Hello World")
+    return 0
 
 
 if __name__ == "__main__":
