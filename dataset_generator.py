@@ -20,7 +20,7 @@ destinations: tuple[Path, Path] = (
 def crop(box: tuple[int, int, int, int]) -> Callable[[Image.Image], Image.Image]:
     def inner(
         image: Image.Image,
-    ):
+    ) -> Image.Image:
         return image.crop(box)
 
     return inner
