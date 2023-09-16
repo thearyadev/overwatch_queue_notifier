@@ -1,31 +1,11 @@
 from utils.notify import Notify
+from typing import Any
+from PIL.Image import Image
 
 
-class Discord(Notify):
-    def send(self, message):
-        print(message)
+class SampleNotifier(Notify):
+    def send(self, image: Image, **_: Any) -> bool:
         return True
 
 
-class Telegram(Notify):
-    def send(self, message):
-        print(message)
-        return True
-
-
-class Slack(Notify):
-    def send(self, message):
-        print(message)
-        return True
-
-
-class Email(Notify):
-    def send(self, message):
-        print(message)
-        return True
-
-
-class Twilio(Notify):
-    def send(self, message):
-        print(message)
-        return True
+# Add a new notifier here
