@@ -17,6 +17,6 @@ class Augmentor:
         self.process.append(func)
         return self
 
-    def apply(self):
+    def apply(self) -> None:
         for func in self.process:
             func(self.image).save(self.destination / f"{uuid4()}.png")
