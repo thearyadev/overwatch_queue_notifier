@@ -7,6 +7,7 @@ from utils.notify import Notify
 
 class SampleNotifier(Notify):
     def send(self, image: Image, **_: Any) -> bool:
+        print("Notifier is working")
         return True
 
 
